@@ -1,10 +1,14 @@
 import React, { Component } from 'react';
 import NavBar from './components/NavBar/NavBar';
 import './HomePage.css';
-import PropertyListings from './components/PropertiesDisplay/PropertyListings';
+import { Routes, Route } from 'react-router-dom';
+import ProductPage from './components/Pages/ProductPage';
 import properties from './data/properties';
-import MapSection from './components/Map/BingMap';
-import Footer from "./components/Footer/Footer"
+import OurStory from './components/Pages/About/OurStory';
+import Team from './components/Pages/About/Team';
+import Careers from './components/Pages/About/Careers';
+import Benefits from './components/Pages/About/Benefits';
+import Footer from './components/Footer/Footer';
 class HomePage extends Component {
   constructor(props) {
     super(props);
@@ -49,16 +53,34 @@ class HomePage extends Component {
     return (
       <div>
         <header>
-          <NavBar></NavBar>
+          <NavBar
+            NavBarOptions={this.state.NavBarOptions}
+            // selectMinPrice={this.selectMinPrice}
+            // selectMaxPrice={this.selectMaxPrice}
+            getPropertiesByCity={this.getPropertiesByCity}
+            // selectBuildingTypeId={this.selectBuildingTypeId}
+            // setOpenHouse={this.setOpenHouse}
+            // getCordsFromLocationName={this.getCordsFromLocationName}
+            onSearch={this.onSearch}
+            onFormSubmit={this.onFormSubmit}
+          ></NavBar>
         </header>
-        <main className="main-page-container">
-          <MapSection PropertiesData={this.state.PropertiesData}></MapSection>
-          <PropertyListings
-            City={this.state.City}
-            setSortBy={this.setSortBy}
-            PropertiesData={this.state.PropertiesData}
-          ></PropertyListings>
-        </main>
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <ProductPage
+                City={this.state.City}
+                setSortBy={this.setSortBy}
+                PropertiesData={this.state.PropertiesData}
+              />
+            }
+          />
+          <Route path="ourstory" element={<OurStory />} />
+          <Route path="benefits" element={<Benefits />} />
+          <Route path="team" element={<Team />} />
+          <Route path="careers" element={<Careers />} />
+        </Routes>
         <Footer></Footer>
       </div>
     );

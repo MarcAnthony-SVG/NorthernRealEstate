@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import Property from './Property.jsx';
 import { Dropdown, DropdownButton } from 'react-bootstrap';
-
-// import '/css/PropertyListings.css';
+import './index.css';
 
 const PropertyListings = ({ City, PropertiesData, setSortBy }) => {
   const [property, setProperty] = useState([...PropertiesData]);

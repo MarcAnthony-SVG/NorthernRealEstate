@@ -1,0 +1,28 @@
+
+.contact-article {
+    display: flex;
+    flex-direction: column;
+  }
+  .contact-article > ul {
+    list-style: none;
+    padding: 0;
+  }
+.email-container > input {
+    width: 100%;
+  }
+.email-subscription {
+  background-color: silver;
+  width: auto;
+  padding: 1%;
+  border: 1px solid black;
+}
+.email-container {
+  display: flex;
+}
+.about-article {
+  width: 400px;
+}
+.about-links {
+  list-style: none;
+  padding: 0;
+}

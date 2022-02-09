@@ -16,8 +16,8 @@ class HomePage extends Component {
       error: null,
       isLoaded: false,
       PropertiesData: [...properties], // When complete replace with [] and unhide componentDidMount
-      City: '',
-      color: '',
+      searchName: '',
+      cityName: '',
       address: '',
       Required: {
         CurrentPage: '1', //REQUIRED
@@ -47,22 +47,35 @@ class HomePage extends Component {
         SortOrder: 'A', //A - ascending | D - descending
       },
     };
+
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+  handleChange(event) {
+    this.setState({ searchName: event.target.value });
+    console.log(event.target.value);
   }
 
+  handleSubmit(event) {
+    event.preventDefault();
+    let searched = this.state.searchName;
+    this.setState({ cityName: searched });
+  }
   render() {
     return (
       <div>
         <header>
           <NavBar
             NavBarOptions={this.state.NavBarOptions}
-            // selectMinPrice={this.selectMinPrice}
+            selectMinPrice={this.selectMinPrice}
             // selectMaxPrice={this.selectMaxPrice}
             getPropertiesByCity={this.getPropertiesByCity}
             // selectBuildingTypeId={this.selectBuildingTypeId}
             // setOpenHouse={this.setOpenHouse}
             // getCordsFromLocationName={this.getCordsFromLocationName}
-            onSearch={this.onSearch}
-            onFormSubmit={this.onFormSubmit}
+            onChange={this.handleChange}
+            handleSubmit={this.handleSubmit}
+            City={this.state.cityName}
           ></NavBar>
         </header>
         <Routes>
@@ -70,7 +83,7 @@ class HomePage extends Component {
             path="/"
             element={
               <ProductPage
-                City={this.state.City}
+                City={this.state.cityName}
                 setSortBy={this.setSortBy}
                 PropertiesData={this.state.PropertiesData}
               />

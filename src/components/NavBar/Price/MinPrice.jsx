@@ -1,6 +1,7 @@
 import React from 'react';
 import { Dropdown, DropdownButton } from 'react-bootstrap';
 const MinPrice = ({ PriceMin, selectMinPrice }) => {
+  
   return (
     <div>
       <div className="MinPrice">

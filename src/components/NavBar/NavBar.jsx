@@ -1,4 +1,4 @@
-import React from 'react';
+import { React, useState } from 'react';
 import PropTypes from 'prop-types';
 import {
   Navbar,
@@ -16,20 +16,21 @@ import Price from './Price/Price.jsx';
 // import BedsAndBath from '../subComponents/bed&Bath';
 // import HomeType from '../subComponents/homeType';
 import More from './More';
+import './index.css';
 
 const NavBar = (props) => {
   return (
     <Navbar bg="light" expand="lg">
       <Link to="/">
-        <span style={{ fontSize: '2em', color: 'green', padding: '0.5em' }}>
-          <i class="fas fa-home" size="9x"></i>
+        <span id="span-icon">
+          <i className="fas fa-home" size="9x"></i>
         </span>
       </Link>
-      <Form onSubmit={props.onFormSubmit}>
+      <Form onSubmit={props.handleSubmit}>
         <Row>
           <Col className="my-1">
             <FormControl
-              onChange={props.onSearch}
+              onChange={props.onChange}
               type="text"
               placeholder="Search"
               className="mr-sm-2"

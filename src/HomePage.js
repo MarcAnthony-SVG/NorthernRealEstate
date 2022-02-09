@@ -73,7 +73,7 @@ class HomePage extends Component {
             // selectBuildingTypeId={this.selectBuildingTypeId}
             // setOpenHouse={this.setOpenHouse}
             // getCordsFromLocationName={this.getCordsFromLocationName}
-            onChange={this.handleChange}
+            selectItem={this.handleChange}
             handleSubmit={this.handleSubmit}
             City={this.state.cityName}
           ></NavBar>

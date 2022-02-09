@@ -30,7 +30,7 @@ const NavBar = (props) => {
         <Row>
           <Col className="my-1">
             <FormControl
-              onChange={props.onChange}
+              onChange={props.selectItem}
               type="text"
               placeholder="Search"
               className="mr-sm-2"
@@ -51,6 +51,7 @@ const NavBar = (props) => {
           </NavDropdown>
           <NavDropdown title="Price" id="basic-nav-dropdown">
             <Price
+              selectItem={props.selectItem}
               PriceMin={props.NavBarOptions.PriceMin}
               PriceMax={props.NavBarOptions.PriceMax}
               selectMinPrice={props.selectMinPrice}

@@ -9,6 +9,7 @@ import Team from './components/Pages/About/Team';
 import Careers from './components/Pages/About/Careers';
 import Benefits from './components/Pages/About/Benefits';
 import Footer from './components/Footer/Footer';
+import capatilizeWords  from './Utilities/Formating';
 class HomePage extends Component {
   constructor(props) {
     super(props);
@@ -19,6 +20,7 @@ class HomePage extends Component {
       searchName: '',
       cityName: '',
       address: '',
+      priceData: '',
       Required: {
         CurrentPage: '1', //REQUIRED
         LatitudeMin: 52.1304, // REQUIRED
@@ -53,12 +55,15 @@ class HomePage extends Component {
   }
   handleChange(event) {
     this.setState({ searchName: event.target.value });
-    console.log(event.target.value);
+    // console.log(event.target.value);
   }
-
+  handleNavBarData(data) {
+    console.log('Data Passing through', data);
+  }
   handleSubmit(event) {
     event.preventDefault();
-    let searched = this.state.searchName;
+    let searched = capatilizeWords(this.state.searchName);
+    
     this.setState({ cityName: searched });
   }
   render() {
@@ -67,14 +72,14 @@ class HomePage extends Component {
         <header>
           <NavBar
             NavBarOptions={this.state.NavBarOptions}
-            selectMinPrice={this.selectMinPrice}
-            // selectMaxPrice={this.selectMaxPrice}
             getPropertiesByCity={this.getPropertiesByCity}
             // selectBuildingTypeId={this.selectBuildingTypeId}
             // setOpenHouse={this.setOpenHouse}
             // getCordsFromLocationName={this.getCordsFromLocationName}
             selectItem={this.handleChange}
             handleSubmit={this.handleSubmit}
+            priceData={this.state.priceData}
+            handleNavBarData={this.handleNavBarData.bind(this)}
             City={this.state.cityName}
           ></NavBar>
         </header>
@@ -84,7 +89,6 @@ class HomePage extends Component {
             element={
               <ProductPage
                 City={this.state.cityName}
-                setSortBy={this.setSortBy}
                 PropertiesData={this.state.PropertiesData}
               />
             }

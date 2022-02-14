@@ -1,4 +1,4 @@
-import { React, useState } from 'react';
+import { React, useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import {
   Navbar,
@@ -19,6 +19,18 @@ import More from './More';
 import './index.css';
 
 const NavBar = (props) => {
+  const [price, setPrice] = useState({ minimum: '', maximum: '' });
+  
+  const handleMinPrice = (e) => {
+    setPrice({ ...price, minimum: e.target.value });
+    // props.handleNavBarData(price);
+  };
+  const handleMaxPrice = (e) => {
+    setPrice({ ...price, maximum: e.target.value });
+    // props.handleNavBarData(price);
+  };
+
+  // console.log(price);
   return (
     <Navbar bg="light" expand="lg">
       <Link to="/">
@@ -51,11 +63,11 @@ const NavBar = (props) => {
           </NavDropdown>
           <NavDropdown title="Price" id="basic-nav-dropdown">
             <Price
-              selectItem={props.selectItem}
+              handleMinPrice={handleMinPrice}
+              handleMaxPrice={handleMaxPrice}
+              price={price}
               PriceMin={props.NavBarOptions.PriceMin}
               PriceMax={props.NavBarOptions.PriceMax}
-              selectMinPrice={props.selectMinPrice}
-              selectMaxPrice={props.selectMaxPrice}
             ></Price>
           </NavDropdown>
           {/* <NavDropdown title="Beds & Bath" id="basic-nav-dropdown"> */}

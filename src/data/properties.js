@@ -6,8 +6,8 @@ let properties = [
     virtual_tour: false,
     open_house: true,
     location: {
-      latitude: 27.98785,
-      longitude: 86.925026,
+      latitude: 29.424122,
+      longitude: -98.493633,
     },
     photo:
       'https://ap.rdcpix.com/32bf311809843eee3a1bce032b6a3982l-m425140880x.jpg',
@@ -24,8 +24,8 @@ let properties = [
     open_house: true,
     virtual_tour: false,
     location: {
-      latitude: 27.78585,
-      longitude: 86.923026,
+      latitude: 29.424122,
+      longitude: -98.434633,
     },
     image:
       'https://www.netclipart.com/pp/m/78-789116_house-the-clip-art-at-clker-com-cartoon.png',
@@ -33,7 +33,7 @@ let properties = [
     beds: 2,
     baths: 1,
     sqft: 1500,
-    address: 'name',
+    address: '12225 South Blvd San Antonio Tx 78999',
     city: 'San Antonio',
   },
   {
@@ -43,8 +43,8 @@ let properties = [
     virtual_tour: false,
     open_house: true,
     location: {
-      latitude: 27.74785,
-      longitude: 86.935026,
+      latitude: 29.434122,
+      longitude: -98.434633,
     },
     image:
       'https://www.netclipart.com/pp/m/78-789116_house-the-clip-art-at-clker-com-cartoon.png',
@@ -52,7 +52,7 @@ let properties = [
     beds: 1,
     baths: 1,
     sqft: 1600,
-    address: 'name',
+    address: '12225 South Blvd San Antonio Tx 78999',
     city: 'San Antonio',
   },
   {
@@ -62,8 +62,8 @@ let properties = [
     virtual_tour: false,
     open_house: true,
     location: {
-      latitude: 27.68785,
-      longitude: 86.725026,
+      latitude: 29.464122,
+      longitude: -98.434633,
     },
     image:
       'https://www.netclipart.com/pp/m/78-789116_house-the-clip-art-at-clker-com-cartoon.png',
@@ -71,7 +71,7 @@ let properties = [
     beds: 4,
     baths: 2,
     sqft: 1300,
-    address: 'name',
+    address: '1245 South Blvd San Antonio Tx 78999',
     city: 'San Antonio',
   },
   {
@@ -81,8 +81,8 @@ let properties = [
     virtual_tour: true,
     open_house: true,
     location: {
-      latitude: 27.67785,
-      longitude: 86.925026,
+      latitude: 29.434122,
+      longitude: -98.423633,
     },
     image:
       'https://www.netclipart.com/pp/m/78-789116_house-the-clip-art-at-clker-com-cartoon.png',
@@ -90,7 +90,7 @@ let properties = [
     beds: 4,
     baths: 3,
     sqft: 100,
-    address: 'name',
+    address: '12225 Hello World San Antonio Tx 78123',
     city: 'San Antonio',
   },
   {
@@ -100,8 +100,8 @@ let properties = [
     virtual_tour: true,
     open_house: false,
     location: {
-      latitude: 27.89785,
-      longitude: 86.925026,
+      latitude: 29.534122,
+      longitude: -98.434633,
     },
     image:
       'https://www.netclipart.com/pp/m/78-789116_house-the-clip-art-at-clker-com-cartoon.png',
@@ -109,7 +109,7 @@ let properties = [
     beds: 3,
     baths: 2,
     sqft: 1000,
-    address: 'name',
+    address: '2365 Fake Street San Antonio Tx 78123',
     city: 'San Antonio',
   },
   {
@@ -119,8 +119,8 @@ let properties = [
     virtual_tour: true,
     open_house: false,
     location: {
-      latitude: 27.34585,
-      longitude: 86.925026,
+      latitude: 29.424122,
+      longitude: -98.434633,
     },
     image:
       'https://www.netclipart.com/pp/m/78-789116_house-the-clip-art-at-clker-com-cartoon.png',
@@ -128,7 +128,7 @@ let properties = [
     beds: 2,
     baths: 1,
     sqft: 1030,
-    address: 'name',
+    address: '1234 Leon Drive San Antonio Tx 78245',
     city: 'San Antonio',
   },
   {
@@ -138,8 +138,8 @@ let properties = [
     virtual_tour: true,
     open_house: true,
     location: {
-      latitude: 27.56785,
-      longitude: 86.444026,
+      latitude: 29.354122,
+      longitude: -98.434633,
     },
     image:
       'https://www.netclipart.com/pp/m/78-789116_house-the-clip-art-at-clker-com-cartoon.png',
@@ -147,7 +147,7 @@ let properties = [
     beds: 3,
     baths: 2,
     sqft: 1450,
-    address: 'name',
+    address: '1225 Love Lane San Antonio Tx 78256',
     city: 'San Antonio',
   },
   {
@@ -157,8 +157,8 @@ let properties = [
     virtual_tour: false,
     open_house: true,
     location: {
-      latitude: 27.78885,
-      longitude: 86.920526,
+      latitude: 29.445122,
+      longitude: -98.434633,
     },
     image:
       'https://www.netclipart.com/pp/m/78-789116_house-the-clip-art-at-clker-com-cartoon.png',
@@ -166,7 +166,7 @@ let properties = [
     beds: 4,
     baths: 3,
     sqft: 1040,
-    address: 'name',
+    address: '12225 South Blvd San Antonio Tx 78999',
     city: 'San Antonio',
   },
   {
@@ -176,8 +176,8 @@ let properties = [
     virtual_tour: true,
     open_house: false,
     location: {
-      latitude: 27.75685,
-      longitude: 86.977026,
+      latitude: 29.384122,
+      longitude: -98.434633,
     },
     image:
       'https://www.netclipart.com/pp/m/78-789116_house-the-clip-art-at-clker-com-cartoon.png',
@@ -185,7 +185,7 @@ let properties = [
     beds: 5,
     baths: 3,
     sqft: 3000,
-    address: 'name',
+    address: '12225 West Ave San Antonio Tx 78899',
     city: 'San Antonio',
   },
 ];

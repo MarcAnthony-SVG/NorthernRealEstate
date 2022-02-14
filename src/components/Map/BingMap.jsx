@@ -9,8 +9,8 @@ const displayStyle = {
 
 const Everest = {
   center: {
-    latitude: 27.98785,
-    longitude: 86.925026,
+    latitude: 98.4936,
+    longitude: 98.4936,
   },
   options: {
     title: 'Mt. Everest',
@@ -54,7 +54,7 @@ const MapSection = ({ PropertiesData }) => {
       <BingMapsReact
         bingMapsKey={`${process.env.REACT_APP_BING_API_KEY}`}
         pushPinsWithInfoboxes={reformatData(PropertiesData)}
-        viewOptions={{ center: { latitude: 27.98785, longitude: 86.925026 } }}
+        viewOptions={{ center: { latitude: 29.42, longitude: -98.49 } }}
       />
     </section>
   );

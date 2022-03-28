@@ -1,6 +1,5 @@
 import { React, useState } from 'react';
 const Benefits = () => {
-  const [visibility, setVisability] = useState(false);
   const [Color, setColor] = useState('red');
   const changeColor = () => {
     if (Color === 'red') {

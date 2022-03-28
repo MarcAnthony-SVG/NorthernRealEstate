@@ -1,5 +1,5 @@
 import BingMapsReact from 'bingmaps-react';
-import React, { useState } from 'react';
+import React from 'react';
 
 const displayStyle = {
   border: '1px solid grey',
@@ -7,18 +7,18 @@ const displayStyle = {
   height: 'auto',
 };
 
-const Everest = {
-  center: {
-    latitude: 98.4936,
-    longitude: 98.4936,
-  },
-  options: {
-    title: 'Mt. Everest',
-  },
-  infobox: {
-    description: 'test',
-  },
-};
+// const Everest = {
+//   center: {
+//     latitude: 98.4936,
+//     longitude: 98.4936,
+//   },
+//   options: {
+//     title: 'Mt. Everest',
+//   },
+//   infobox: {
+//     description: 'test',
+//   },
+// };
 /* 
   Thoughts: 
     1. render places on the map

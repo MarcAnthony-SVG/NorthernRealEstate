@@ -1,4 +1,4 @@
-import { React, useState, useEffect } from 'react';
+import { React, useState } from 'react';
 import PropTypes from 'prop-types';
 import {
   Navbar,
@@ -15,7 +15,6 @@ import { Link } from 'react-router-dom';
 import Price from './Price/Price.jsx';
 // import BedsAndBath from '../subComponents/bed&Bath';
 // import HomeType from '../subComponents/homeType';
-import More from './More';
 import './index.css';
 
 const NavBar = (props) => {

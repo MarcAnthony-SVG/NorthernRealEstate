@@ -1,7 +1,6 @@
 import MapSection from '../Map/BingMap';
 import PropertyListings from '../PropertiesDisplay/PropertyListings';
-import { useState, useEffect } from 'react';
-import axios from 'axios';
+import { useState } from 'react';
 const ProductPage = ({ PropertiesData, City }) => {
   const [property, setProperty] = useState([...PropertiesData]);
 
@@ -22,18 +21,22 @@ const ProductPage = ({ PropertiesData, City }) => {
   const sortByVirtualTour = (arr) => {
     const originalData = [...PropertiesData];
     const filtered = originalData.filter((property) => {
+      let result;
       if (property.virtual_tour === true) {
-        return property;
+        result = property;
       }
+      return result;
     });
     setProperty(filtered);
   };
   const sortByOpenHouses = (arr) => {
     const originalData = [...PropertiesData];
     const filtered = originalData.filter((property) => {
+      let result;
       if (property.open_house === true) {
-        return property;
+        result = property;
       }
+      return result;
     });
     setProperty(filtered);
   };
